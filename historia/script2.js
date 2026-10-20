@@ -53,7 +53,7 @@ const p = [
 
 const im = [
     "Remo.jpg",
-    "Origins.jpg",
+    "origins.jpg",
     "goldenEra.jpg",
     "2019.jpg",
     "torcida.jpg"
