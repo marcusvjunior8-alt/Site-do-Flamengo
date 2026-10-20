@@ -1,24 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mengão</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="imgs/logo.png">
 </head>
+
 <body>
     <header class="top">
         <div class="logo">
             <img src="./imgs/logo.png" alt="">
         </div>
         <div class="nav">
-            <a href="" class="active">Home</a>
-            <a href="">Títulos</a>
+            <a href="./index.html" class="active">Home</a>
+            <a href="./titulos.html">Títulos</a>
             <a href="">Ídolos</a>
             <a href="">História</a>
         </div>
     </header>
 
-    
+    <section class="banner">
+        <div class="banner-content">
+            <h1>RAÇA, AMOR E PAIXÃO</h1>
+            <p>Acompanhe a trajetória, os grandes títulos e os heróis que vestiram o Manto Sagrado.</p>
+            <a href="./titulos.html" class="btn-banner">Ver Galeria de Títulos</a>
+        </div>
+    </section>
+
+    <section class="container sec-videos">
+        <h2 class="titulo-seccao">Vídeos em Destaque</h2>
+
+        <div class="grid-videos">
+
+
+            <div class="card-video card-short">
+                <div class="video-embed short-embed">
+                    <video src="./imgs/torcida.mp4" autoplay loop muted controls></video>
+                </div>
+                <h3>Torcida Organizada do Flamengo</h3>
+            </div>
+
+
+            <div class="card-video card-short">
+                <div class="video-embed short-embed">
+                    <video src="./imgs/brasileiro.mp4" autoplay loop muted controls></video>
+                </div>
+                <h3>Entrega da Taça do Brasileirão</h3>
+            </div>
+
+
+            <div class="card-video card-short">
+                <div class="video-embed short-embed">
+                    <video src="./imgs/liberta.mp4" autoplay loop muted controls></video>
+                </div>
+                <h3>Ergue a Taça da Libertadores</h3>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+
+
+            <div class="footer-col">
+                <h3 class="footer-title">MENGÃO</h3>
+                <p>O maior portal de histórias, ídolos e conquistas do Clube de Regatas do Flamengo.</p>
+            </div>
+
+
+            <div class="footer-col">
+                <h4 class="footer-subtitle">Redes Oficiais</h4>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/flamengo" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/flamengo" target="_blank" rel="noopener noreferrer"
+                        aria-label="X Twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@flamengo" target="_blank" rel="noopener noreferrer"
+                        aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Linha de Direitos Autorais -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Site do Flamengo — Projeto Acadêmico / Fan Page. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
