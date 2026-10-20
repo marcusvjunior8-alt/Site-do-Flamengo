@@ -174,3 +174,26 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
 }
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    color: #ffffff;
+    background-color: #222222;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Torna o botão redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: #c8102e; /* Vermelho Flamengo no hover */
+    transform: translateY(-3px); /* Pequeno efeito de elevação */
+}
