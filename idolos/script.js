@@ -12,7 +12,7 @@ const crdImage = [
     "babigol.jpg",
     "BH.jpg",
     "capacete.jpg",
-    "Leandro.jpg",
+    "leandro.jpg",
     "zico.jpg",
     "ocaba.jpg"
 ];

@@ -9,11 +9,9 @@ body {
     background-color: #0D0D0D;
 }
 
-
-/*  header */
+/* Header */
 .top {
     display: flex;
-    background-color: #FFFFFF;
     justify-content: space-between;
     align-items: center;
     color: #2D3748;
@@ -24,9 +22,7 @@ body {
 
 .logo img {
     width: 130px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .nav {
@@ -56,18 +52,16 @@ body {
     border-bottom: 2px solid #d4af37;
 }
 
-/* Home */
-/* banner */
+/* Home / Banner */
 .banner {
     width: 100%;
-    height: 80vh;
-    /* Ocupa 80% da altura da tela */
+    min-height: 80vh;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('./imgs/maracana-banner.jpg') no-repeat center center/cover;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
 .banner-content h1 {
@@ -88,7 +82,6 @@ body {
 
 .btn-banner {
     background-color: #c8102e;
-    /* Vermelho Flamengo */
     color: #ffffff;
     padding: 12px 30px;
     text-decoration: none;
@@ -97,20 +90,19 @@ body {
     border-radius: 5px;
     border: 2px solid #c8102e;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .btn-banner:hover {
     background-color: #d4af37;
-    /* Dourado */
     border-color: #d4af37;
     color: #000000;
 }
 
-/* videos */
-/* Secção de Vídeos */
+/* Seção de Vídeos */
 .sec-videos {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 50px 0;
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -124,15 +116,13 @@ body {
     text-transform: uppercase;
 }
 
-/* Layout em grelha responsivo */
 .grid-videos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     align-items: start;
 }
 
-/* Cartão do Vídeo */
 .card-video {
     background-color: #1a1a1a;
     border-radius: 10px;
@@ -148,7 +138,6 @@ body {
     font-weight: 600;
 }
 
-/* Proporção 16:9 para vídeos normais */
 .video-embed {
     position: relative;
     padding-bottom: 56.25%;
@@ -157,10 +146,8 @@ body {
     background-color: #000;
 }
 
-/* Proporção 9:16 para YouTube Shorts (Verticais) */
 .short-embed {
     padding-bottom: 177.77%;
-    /* Proporção vertical */
 }
 
 .video-embed iframe {
@@ -172,16 +159,15 @@ body {
     border: 0;
 }
 
-/* Pagina titulos */
+/* Página Títulos */
 .banner-titulos {
     width: 100%;
-    height: 50vh;
-    /* Ocupa 50% da altura da tela */
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 20px;
+    padding: 40px 20px;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url('./imgs/maracana-banner.jpg') no-repeat center center/cover;
 }
@@ -194,18 +180,21 @@ body {
 
 .grid-titulos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
 }
 
 .card-titulo {
     background-color: #1a1a1a;
     border-top: 4px solid #c8102e;
-    /* Vermelho Flamengo */
     border-radius: 8px;
     padding: 25px;
     text-align: center;
     transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-titulo:hover {
+    transform: translateY(-7px);
 }
 
 .card-img {
@@ -219,9 +208,9 @@ body {
 }
 
 .card-img img {
-    width: 45%;
-    height: 200px;
-    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 .card-info h2 {
@@ -235,7 +224,6 @@ body {
     font-size: 2.5rem;
     font-weight: bold;
     color: #d4af37;
-    /* Dourado */
     margin-bottom: 8px;
 }
 
@@ -243,28 +231,109 @@ body {
     color: #b0b0b0;
 }
 
-/* rodapé */
-/* Redes Sociais com Ícones */
-.footer-socials {
-    display: flex;
-    gap: 15px;
-}
-
-.footer-socials a {
+/* Rodapé */
+footer {
+    background-color: #0b0b0b;
+    padding: 40px 20px 20px;
     color: #ffffff;
-    background-color: #222222;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Torna o botão redondo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.footer-socials a:hover {
-    background-color: #c8102e; /* Vermelho Flamengo no hover */
-    transform: translateY(-3px); /* Pequeno efeito de elevação */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-title {
+    color: #c8102e;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.footer-subtitle {
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.footer-col p {
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #222222;
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+/* ===================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   =================================== */
+
+/* Tablets e telas menores (até 768px) */
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        max-height: none;
+        padding-bottom: 15px;
+    }
+
+    .logo img {
+        margin: 15px 0 10px 0;
+    }
+
+    .nav {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .titulo-seccao {
+        font-size: 1.6rem;
+    }
+
+    .footer-col {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+/* Smartphones (até 480px) */
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .btn-banner {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .grid-videos, 
+    .grid-titulos {
+        grid-template-columns: 1fr;
+    }
 }

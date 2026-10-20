@@ -62,17 +62,14 @@ const im = [
 function createCard() {
     for (let i = 0; i < h2.length; i++) {
         topic.innerHTML += `
-<div class="topico" id="topico">
+        <div class="topico">
             <div class="left">
                 <h2 class="h2">${h2[i]}</h2>
-                <br>
                 <p>${p[i]}</p>
             </div>
-            <img src="${im[i]}" alt="image" class="imgH">
+            <img src="${im[i]}" alt="${h2[i]}" class="imgH">
         </div>
-        `
-
+        `;
     }
 }
-
 createCard();

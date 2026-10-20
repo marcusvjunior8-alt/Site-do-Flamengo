@@ -9,24 +9,20 @@ body {
     background-color: #0D0D0D;
 }
 
-
-/*  header */
+/* Header */
 .top {
     display: flex;
-    background-color: #FFFFFF;
+    background-color: #1A1A1A;
     justify-content: space-between;
     align-items: center;
     color: #2D3748;
     max-height: 200px;
     border: 1px solid gray;
-    background-color: #1A1A1A;
 }
 
 .logo img {
     width: 130px;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
 }
 
 .nav {
@@ -56,36 +52,47 @@ body {
     border-bottom: 2px solid #d4af37;
 }
 
+/* Conteúdo Principal */
 .conteudo {
     max-width: 1500px;
     margin: 40px auto;
+    padding: 0 20px;
 }
 
-.heroB {
-    background-image: url(herobanner.jpg);
+.heroB,
+.heroBa {
     width: 100%;
-    height: 550px;
+    min-height: 350px;
+    height: 55vh;
+    max-height: 550px;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.heroB {
+    background-image: url(herobanner.jpg);
+}
+
+.heroBa {
+    background-image: url(../historia/historia.jpg);
+}
+
 h1 {
     text-align: center;
     color: #C8102E;
-    padding-bottom: 10px;
+    padding: 20px 0 10px;
 }
 
+/* Grid de Cards Ajustado */
 .cards {
-    margin: 15px auto;
+    margin: 20px auto 3rem auto;
     width: 100%;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 350px);
-    gap: 1.25rem;
-    margin-bottom: 3rem;
-    gap: 20px 130px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px));
+    gap: 30px;
 }
 
 .card {
@@ -94,16 +101,14 @@ h1 {
     padding: 1.25rem 1.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s, box-shadow 0.2s;
-    height: 470px;
-    background-position: center;
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    width: 350px;
+    width: 100%;
 }
-
 
 .card:hover {
     background-image: none !important;
@@ -123,7 +128,8 @@ h1 {
     color: #C8102E;
     opacity: 0;
     transition: opacity 0.2s;
-    font-size: 30px;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 .card p {
@@ -131,69 +137,166 @@ h1 {
     margin: 0;
     line-height: 1.4;
     transition: opacity 0.2s;
+    text-align: center;
 }
-.textoI{
-    font-size: 25px;
+
+.textoI {
+    font-size: 1.5rem;
     color: #e6f5ee;
-    margin: 10px auto;
+    margin: 20px auto;
     padding-bottom: 10px;
     text-align: center;
 }
 
-.topicos{
+/* Tópicos */
+.topicos {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 50px auto;
 }
 
-.topico{
+.topico {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    color: #e6f5ee;
-    gap: 10px;
-    border: 1px solid #C8102E;
+    background-color: #1a1a1a;
+    border: 1px solid #c8102e;
     border-radius: 10px;
-    padding: 10px;
-}
-.imgH{
-    border-radius: 10px;
-    width: 300px;
-    height: 300px;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
-.heroBa{
-    background-image: url(../historia/historia.jpg);
-    width: 100%;
-    height: 550px;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.topico .left {
+    flex: 1;
+    text-align: left;
 }
-.footer-socials {
+
+.topico .h2 {
+    color: #c8102e;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.topico p {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.imgH {
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    flex-shrink: 0;
+}
+
+/* Rodapé */
+.footer-content {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.footer-socials a {
+.footer-col {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-title {
+    color: #c8102e;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.footer-subtitle {
     color: #ffffff;
-    background-color: #222222;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%; /* Torna o botão redondo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
 }
 
-.footer-socials a:hover {
-    background-color: #c8102e; /* Vermelho Flamengo no hover */
-    transform: translateY(-3px); /* Pequeno efeito de elevação */
+.footer-col p {
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #222222;
+    color: #888888;
+    font-size: 0.9rem;
+}
+
+/* ===================================
+   MEDIA QUERIES (RESPONSIVIDADE)
+   =================================== */
+
+/* Tablets (até 768px) */
+@media (max-width: 768px) {
+    .top {
+        flex-direction: column;
+        max-height: none;
+        padding-bottom: 15px;
+    }
+
+    .logo img {
+        margin: 15px 0 10px 0;
+    }
+
+    .nav {
+        margin-right: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 18px;
+    }
+
+    .textoI {
+        font-size: 1.2rem;
+    }
+
+    .footer-col {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+/* Smartphones (até 650px) */
+@media (max-width: 650px) {
+    .topico {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .topico .left {
+        text-align: center;
+    }
+
+    .imgH {
+        width: 100%;
+        height: 200px;
+    }
+
+    .heroB,
+    .heroBa {
+        height: 300px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
 }
